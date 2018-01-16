@@ -37,7 +37,9 @@ function askID(){
 		})
 		.then(function(response){
 
-			var idRes = parseInt(response);
+			
+
+			
 			//***Run casper function***//
 			// if(response.action){
 			// 	;
@@ -53,6 +55,7 @@ function askID(){
 			purchase();
 
 			});
+		var idRes =response.action;
 
 		};
 
