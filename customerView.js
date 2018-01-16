@@ -14,12 +14,18 @@ connection.connect(function(err){
 	
 });
 
+
 // //*****Probably Need to Add to this Function*******////
-// function itemList(){
-// 	var query = "SELECT id, Name, Department, Price, In_Stock FROM items WHERE ?";
-// 	console.log(query)
-// };
-// itemList();
+function itemList(){
+	var sql = "SELECT * FROM items";
+	connection.query(sql, (err, res) => {
+		if(err) throw err;
+		console.log(res);
+		askID();
+	});
+	
+};
+itemList();
 
 // **********could make this prompt into a list, and use "switch."***///
 function askID(){
@@ -30,15 +36,26 @@ function askID(){
 			message:"Enter the ID of the item you would like to purchase."
 		})
 		.then(function(response){
+
+			var idRes = parseInt(response);
 			//***Run casper function***//
-			if(response.action){
-				var query = "SELECT id, Name, Department, Price, In-Stock FROM bamazon WHERE?";
-				
-			}
+			// if(response.action){
+			// 	;
+			// 	var query = "SELECT id, Name, Department, Price, In-Stock FROM bamazon WHERE?";
+			// 	connection.query(query, {action: response.action }, function(err, res){
+			// 		for (var i = 0; i < res.length; i++){
+			// 			console.log("ID: " + res[i].id); 
+
+			// 			// + "|| Department: " + res[i].Department + "|| Price: " + res[i].Price);
+			// 		};
+			// 	});
+			// };
 			purchase();
+
 			});
+
 		};
-askID();
+
 
 function purchase(){
 	inquirer
@@ -47,16 +64,28 @@ function purchase(){
 		type:"input",
 		message:"How many would you like to buy?"
 	})
-		.then(function(respose){
-			if(respose.action > 0){
-			/////****Need to capture user's input*******////
-			//////**And subtract the user's input from**//////
-			//////*The In-Stock column from the sql table.*////
+		.then(function(response){
+			if(response.action){
+			
+
+			// connection.query(sql, (err, res) =>{
+			// 	if (err) throw err;
+
+			// 	var sql = "UPDATE items SET in_stock = in_stock - response.action WHERE id = askID.idRes"
+
+			// 	connection.query(sql, (err, res) =>{
+			// 		if(err) throw err;
+			// 		askID();
+			// 	});
+			// });
+			
+			console.log(askID.idRes);
+
 			}
 
-			console.log("You've purchased " + respose.action +"!")
+			// console.log("You've purchased " + response.action +"!")
 		})
-		//Run the purchase function here to loop//
+		
 };
 
 
