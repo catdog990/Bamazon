@@ -1,5 +1,6 @@
 var inquirer = require("inquirer");
 var mysql = require("mysql");
+require("console.table");
 
 var connection = mysql.createConnection({
 	host:"localhost",
@@ -15,12 +16,11 @@ connection.connect(function(err){
 });
 
 
-// //*****Probably Need to Add to this Function*******////
 function itemList(){
 	var sql = "SELECT * FROM items";
 	connection.query(sql, (err, res) => {
 		if(err) throw err;
-		console.log(res);
+		console.table(res);
 		askID();
 	});
 	
@@ -46,19 +46,22 @@ function askID(){
 			var itemID = response.action;
 			var purch = response.answer;
 
-			connection.query("SELECT id, Name, Department, Price, In_Stock FROM items WHERE ?", {id: response.action}, function(err, res){
 
 
+			connection.query("SELECT id, Name, Department, Price, In_Stock FROM items WHERE ?", {id: itemID}, function(err, res){
+				var wut = res[0].In_Stock;
+		if(wut > purch){
 
 
-			var update = res[0].In_Stock - response.answer;
+			var update = res[0].In_Stock - purch;
 			connection.query("UPDATE items SET ? WHERE ?",
 			[{
 				In_Stock: update
 			},
 			{
-				id: response.action
-			}], function(err, response){});
+				id: itemID
+			}], 
+			);
 
 			// var stock = res[0].In_Stock;
 			// console.log(stock);
@@ -69,10 +72,16 @@ function askID(){
 						
 				// });
 
-			
+			};
+
+			if(res[0].In_Stock <= 0){
+				console.log("No items in stock...sorry")
+			};
 
 			
 				});
+
+			
 			
 
 
