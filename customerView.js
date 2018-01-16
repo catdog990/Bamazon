@@ -46,22 +46,33 @@ function askID(){
 			var itemID = response.action;
 			var purch = response.answer;
 
-			var update = res[0].in_stock - purch;
+			connection.query("SELECT id, Name, Department, Price, In_Stock FROM items WHERE ?", {id: response.action}, function(err, res){
+
+
+
+
+			var update = res[0].In_Stock - response.answer;
 			connection.query("UPDATE items SET ? WHERE ?",
 			[{
-				in_stock:
-			}]
+				In_Stock: update
+			},
+			{
+				id: response.action
+			}], function(err, response){});
+
+			// var stock = res[0].In_Stock;
+			// console.log(stock);
 			// let sql = "UPDATE items SET in_stock = in_stock - purch WHERE id = itemID";
-				connection.query(sql, (err, res) =>{
-					if(err) throw err;
+				// connection.query(sql, (err, res) =>{
+				// 	if(err) throw err;
 						itemList();
 						
+				// });
+
+			
+
+			
 				});
-
-			
-
-			
-
 			
 
 
