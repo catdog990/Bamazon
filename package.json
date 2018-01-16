@@ -1,0 +1,24 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "Amazon rip off",
+  "main": "customerView.js",
+  "dependencies": {
+    "inquirer": "^5.0.0",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catdog990/Bamazon.git"
+  },
+  "author": "Osman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/catdog990/Bamazon/issues"
+  },
+  "homepage": "https://github.com/catdog990/Bamazon#readme"
+}
