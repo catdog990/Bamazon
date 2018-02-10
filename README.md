@@ -9,8 +9,8 @@ Bamazon is an application where customers can choose and buy certain items from 
 <h3><strong>Instructions:</strong></h3>
 <strong>
 -Clone this repo into your project folder.<br>
--Run npm install in the terminal.<br>
--Run node customerview.js<br>
+-Run `npm install` in the terminal.<br>
+-Run `node customerview.js`<br>
 </strong>
 
 
@@ -20,8 +20,8 @@ Bamazon is an application where customers can choose and buy certain items from 
 Technologies Used:
 </strong>
 </h4>
--<a href="https://nodejs.org/en/">Node</a><br>
--<a href="https://www.mysql.com/">MySQL</a>
+-[Node](https://nodejs.org/en/)
+-[MySQL](https://www.mysql.com/)
 <br>
 <br>
 
