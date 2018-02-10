@@ -2,12 +2,12 @@
 <strong>
 Bamazon is an application where customers can choose and buy certain items from a list.  The customer chooses the item from its unique id; the amount left "In_Stock" of the item is updated depending on the amount the customer wants to buy. 
 </strong>
-
+<br>
 <strong>
 Technologies Used:
 </strong>
-
--<a href ="https://nodejs.org/en/">Node</a>
+<br>
+-<a href ="https://nodejs.org/en/">Node</a><br>
 -MySQL
 
 
