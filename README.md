@@ -7,7 +7,7 @@ Bamazon is an application where customers can choose and buy certain items from 
 Technologies Used:
 </strong>
 
--<a href ="https://nodejs.org/en/>"Node</a>
+-<link a href ="https://nodejs.org/en/">Node
 -MySQL
 
 
