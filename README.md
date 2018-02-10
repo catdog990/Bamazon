@@ -4,7 +4,7 @@
 Bamazon is an application where customers can choose and buy certain items from a list.  The customer chooses the item from its unique id; the amount left "In_Stock" of the item is updated depending on the amount the customer wants to buy. 
 
 
-##Instructions:
+## Instructions:
 * Clone this repo into your project folder.<br>
 * Run `npm install` in the terminal.<br>
 * Run `node customerview.js`<br>
