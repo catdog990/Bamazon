@@ -6,6 +6,13 @@ Bamazon is an application where customers can choose and buy certain items from 
 </strong>
 </h3>
 
+<h3><strong>Instructions:</strong></h3>
+-Clone this repo into your project folder.
+-Run npm install in the terminal.
+-Run node customerview.js
+
+
+
 <br>
 <h4>
 <strong>
