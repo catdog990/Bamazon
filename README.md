@@ -23,6 +23,6 @@ Technologies Used:
 -<a href="https://nodejs.org/en/">Node</a><br>
 -<a href="https://www.mysql.com/">MySQL</a>
 <br>
-
+<br>
 ![bamazon](https://user-images.githubusercontent.com/31078600/35022573-999a8ce2-fb04-11e7-8d0f-882427e695fd.gif)
 
