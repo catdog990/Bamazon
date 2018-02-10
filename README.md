@@ -14,16 +14,12 @@ Bamazon is an application where customers can choose and buy certain items from 
 </strong>
 
 
-<br>
-<h4>
-<strong>
-Technologies Used:
-</strong>
-</h4>
--[Node](https://nodejs.org/en/)
--[MySQL](https://www.mysql.com/)
-<br>
-<br>
+
+##Technologies Used:
+
+*[Node](https://nodejs.org/en/)
+*[MySQL](https://www.mysql.com/)
+
 
 ![bamazon](https://user-images.githubusercontent.com/31078600/35022573-999a8ce2-fb04-11e7-8d0f-882427e695fd.gif)
 
